@@ -20,6 +20,8 @@
 # sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 sed -i '$a src-git OpenClash  https://github.com/vernesong/OpenClash.git' feeds.conf.default
 
+sed -i '$a src-git neobird  https://github.com/thinktip/luci-theme-neobird.git' feeds.conf.default
+
 # 添加插件源码
 # sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 # passwall依赖
