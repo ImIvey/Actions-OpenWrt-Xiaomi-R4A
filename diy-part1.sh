@@ -32,6 +32,9 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 rm -rf package/lean/luci-theme-neobird  
 git clone https://github.com/thinktip/luci-theme-neobird.git package/lean/luci-theme-neobird
 
+rm -rf package/lean/luci-theme-edge  
+git clone https://github.com/kiddin9/luci-theme-edge
+
 
 ### 修改为R4A千兆版Breed直刷版
 ## mt7621_xiaomi_mir3g-v2.dts 好像被改成了 mt7621_xiaomi_mi-router-4a-3g-v2.dtsi  测试一下
