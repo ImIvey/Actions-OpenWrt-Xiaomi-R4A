@@ -17,10 +17,10 @@ on:
       ssh:
         description: 'SSH 连接至 Actions'
         required: true
-        default: 'true'
+        default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/ImIvey/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ra4.config
