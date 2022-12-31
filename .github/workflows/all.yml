@@ -22,6 +22,7 @@ env:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         version: [default, vssr, ssrplus, passwall, openclash]
     runs-on: ubuntu-20.04
