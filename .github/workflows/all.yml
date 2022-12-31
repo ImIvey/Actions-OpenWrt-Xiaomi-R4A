@@ -16,6 +16,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
+  CACHE: 'false'
   TZ: Asia/Shanghai
 
 jobs:
@@ -54,7 +55,7 @@ jobs:
     - name: Cache
       uses: klever1988/cachewrtbuild@main
       with:
-        ccache: 'true'
+        ccache: $CACHE
         prefix: ${{ github.workspace }}/openwrt
         mixkey: 'xiaomi_r4a_all'
 
