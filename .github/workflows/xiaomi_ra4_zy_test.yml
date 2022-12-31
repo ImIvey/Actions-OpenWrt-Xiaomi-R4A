@@ -66,6 +66,7 @@ jobs:
       with:
         ccache: 'true'
         prefix: ${{ github.workspace }}/openwrt
+        mixkey: 'xiaomi_ra4'
 
     - name: Load custom feeds
       run: |
