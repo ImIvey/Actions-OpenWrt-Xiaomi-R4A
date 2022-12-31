@@ -20,7 +20,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
-  CACHE: 'false'
+  CACHE_ACTIONS: 'false'
   TZ: Asia/Shanghai
 
 jobs:
@@ -59,10 +59,11 @@ jobs:
 
       - name: Cache
         uses: klever1988/cachewrtbuild@main
+        if: env.CACHE_ACTIONS == 'true'
         with:
-          ccache: $CACHE
+          ccache: 'true'
           prefix: ${{ github.workspace }}/openwrt
-          mixkey: 'xiaomi_r4a_all'
+          mixkey: xiaomi_r4a_all_${{ matrix.version }}
 
       - name: Load custom feeds
         run: |
