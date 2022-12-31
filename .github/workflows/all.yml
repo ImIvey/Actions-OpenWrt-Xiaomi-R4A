@@ -4,6 +4,11 @@ name: 编译_全部
 on:
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      cache:
+        description: '使用缓存加速编译'
+        required: true
+        default: 'false'
 
 env:
   REPO_URL: https://github.com/ImIvey/lede
