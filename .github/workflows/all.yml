@@ -81,7 +81,10 @@ jobs:
       - name: Load custom configuration
         run: |
           [ -e files ] && mv files openwrt/files
-          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+          if [ -e $CONFIG_FILE ]; then
+            sed -i "1i$(cat config/.config)" $CONFIG_FILE
+            mv $CONFIG_FILE openwrt/.config
+          fi
           chmod +x $DIY_P2_SH
           cd openwrt
           $GITHUB_WORKSPACE/$DIY_P2_SH
