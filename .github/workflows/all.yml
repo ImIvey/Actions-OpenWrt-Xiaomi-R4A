@@ -82,8 +82,7 @@ jobs:
         run: |
           [ -e files ] && mv files openwrt/files
           if [ -e $CONFIG_FILE ]; then
-            cat config/.config $CONFIG_FILE > $CONFIG_FILE
-            mv $CONFIG_FILE openwrt/.config
+            cat config/.config $CONFIG_FILE > openwrt/.config
           fi
           chmod +x $DIY_P2_SH
           cd openwrt
